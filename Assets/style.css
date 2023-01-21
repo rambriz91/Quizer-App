@@ -36,12 +36,18 @@ body {
     background-color: blueviolet;
     width: 200px;
     height: 50px;
-    margin: 20% 0;
+    margin: 20% 0 0% 43%;
     color: white;
     font-weight: 600;
     font-size: 20px;
     border: none;
     border-radius: 10%;
+}
+
+#question-text {
+    margin: 5% 0 0% 46%;
+    font-size: 20px;
+    font-weight: 400;
 }
 
 #answers {
@@ -61,5 +67,4 @@ body {
 }
 .hidden {
     position: relative;
-    margin-left: 40%;
 }
