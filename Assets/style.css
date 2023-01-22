@@ -33,10 +33,10 @@ body {
 }
 
 #start {
-    background-color: blueviolet;
+    background-color: green;
     width: 200px;
     height: 50px;
-    margin: 20% 0 0% 43%;
+    margin: 10% 0 20% 43%;
     color: white;
     font-weight: 600;
     font-size: 20px;
@@ -44,14 +44,19 @@ body {
     border-radius: 10%;
 }
 
-#question-text {
-    margin: 5% 0 0% 46%;
-    font-size: 20px;
-    font-weight: 400;
+#question-container {
+    margin: 5% 0 0% 15%;
+    font-size: 28px;
+    font-weight: 700;
+    color:white; 
 }
 
 #answers {
     margin: 10% 20% 0 42%;
+    padding: 3%;
+    background-color: white;
+    width: fit-content;
+    border-radius: 5%;
 }
 
 .btn {
@@ -62,9 +67,24 @@ body {
     margin: 10px 20px 10px 20px;
     display: grid;
     font-size: 20px;
-    border-radius: 10%;
-    padding: 1%;
+    border-radius: 30%;
+    padding: 2%;
+}
+
+.btn:hover {
+    background-color: aqua;
+    color: black;
+
 }
 .hidden {
     position: relative;
+    display: none;
+}
+
+.correct {
+    background-color: green;
+}
+
+.wrong {
+    background-color: red;
 }
