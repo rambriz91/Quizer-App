@@ -3,6 +3,7 @@ var timerEl = document.getElementById('timer-text');
 var startBtn = document.getElementById('start');
 var answerDiv = document.getElementById('answers');
 var questionContainer = document.getElementById('question-container');
+var submitInit = document.getElementById('submitInitials');
 var scoreText = document.getElementById('score-text');
 var btn1 = document.getElementById('btn-1');
 var btn2 = document.getElementById('btn-2');
@@ -68,7 +69,7 @@ function startTimer() {
                 winGame();
             }
         }
-        if (timerVal === 0) {
+        if (timerVal <= 0) {
             clearInterval(timer);
             loseGame();
         }
@@ -84,11 +85,14 @@ function loseGame() {
 }
 
 function winGame () {
+    isWin = true;
     questionContainer.textContent ="YOU WON!!!🏆"
     answerDiv.classList.add('hidden')
     localStorage.setItem('Score', timerVal + 5)
     clearTimeout(timer)
-}
+    submitInit.classList.remove('hidden')
+    }
+
 
 function init() {
     score = localStorage.getItem('Score', timerVal)
@@ -139,8 +143,12 @@ function showQuestion3(currentQ) {
 }
 
 function subtractTime() {
-    timerVal= timerVal -5
-}
+    if (timerVal < 6) {
+        timerVal === 0
+    }
+    else {
+    timerVal= timerVal - 5
+}}
 // Event Listener 
 
 startBtn.addEventListener('click', startGame);
