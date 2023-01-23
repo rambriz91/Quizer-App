@@ -39,16 +39,18 @@ body {
     margin: 10% 0 20% 43%;
     color: white;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 36px;
     border: none;
-    border-radius: 10%;
+    border-radius: 5%;
+    box-shadow: 10px 5px 5px black;
 }
 
 #question-container {
-    margin: 5% 0 0% 15%;
+    margin: 5% 0 0% 5%;
     font-size: 28px;
     font-weight: 700;
     color:white; 
+    text-align: center;
 }
 
 #answers {
@@ -57,6 +59,7 @@ body {
     background-color: white;
     width: fit-content;
     border-radius: 5%;
+    box-shadow: 10px 5px 5px black;
 }
 
 .btn {
@@ -67,8 +70,9 @@ body {
     margin: 10px 20px 10px 20px;
     display: grid;
     font-size: 20px;
-    border-radius: 30%;
+    border-radius: 5%;
     padding: 2%;
+    box-shadow: 8px 4px 4px black;
 }
 
 .btn:hover {
@@ -79,12 +83,4 @@ body {
 .hidden {
     position: relative;
     display: none;
-}
-
-.correct {
-    background-color: green;
-}
-
-.wrong {
-    background-color: red;
 }
