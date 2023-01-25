@@ -16,8 +16,8 @@ This assignment required me to create a coding quiz with multiple choice questio
 ![Alt text](Assets/Quizzer-Screenshot.png)
 
 ## Links
-Deployed Webpage: https://rambriz91.github.io/Ambriz-DevFolio/
-GitHub Repo Page: https://github.com/rambriz91/Ambriz-DevFolio
+Deployed Webpage: https://rambriz91.github.io/Quizer-App/
+GitHub Repo Page: https://github.com/rambriz91/Quizer-App
 
 ## Credits
 
