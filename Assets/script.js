@@ -118,7 +118,7 @@ function init() {
     timerVal = 0;
     timerEl.textContent = timerVal;
 }
-
+// questions that display in question container 
 function showQuestion1(currentQ) {
     currentQ = questions[0].question;
     questionContainer.innerText = currentQ;
@@ -161,7 +161,7 @@ function showQuestion3(currentQ) {
     btn3.addEventListener('click', subtractTime)
     btn4.addEventListener('click', winGame)
 }
-
+// Penalty function for wrong answers. 
 function subtractTime() {
     if (timerVal < 6) {
         timerVal === 0

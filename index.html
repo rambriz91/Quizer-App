@@ -9,23 +9,22 @@
     <link rel="stylesheet" href="./Assets/style.css">
 </head>
 <header>
+    <!-- Score and Timer -->
     <h2 id="score">View Scores:<span id="score-text">0</span></h2>
     <h2 id="timer">Timer:<span id="timer-text"></span></h2>
 </header>
 <body>
     <section id="container">
+        <!-- Questions container -->
         <div  id= question-container class="hidden">Question:</div>
         <div id="submitInitials" class="hidden">
+            <!-- End of game score and initials form -->
             <h2>Your Score:<span id="yourscore"></span></h2>
-            <!-- <form>
-                <label for="initials">Initials</label>
-                <input type="text" id="'initials" name="initials">
-                <input type="submit" value="Submit">
-            </form> -->
             <input id="initials" type="text" placeholder="innitials pls" />
             <p id="display-name"></p>
             <button id="save-name">save name</button>
         </div>
+        <!-- Buttons containter -->
         <div id="answers" class="hidden">
             <button id="btn-1" class="btn"></button>
             <button id="btn-2" class="btn"></button>
@@ -33,6 +32,7 @@
             <button id="btn-4" class="btn"></button>
         </div>
     </section>
+    <!-- Start Button -->
     <section>
         <button id="start">Start</button>
     </section>
