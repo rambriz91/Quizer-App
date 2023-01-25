@@ -9,6 +9,7 @@ var btn1 = document.getElementById('btn-1');
 var btn2 = document.getElementById('btn-2');
 var btn3 = document.getElementById('btn-3');
 var btn4 = document.getElementById('btn-4');
+var yourScore = document.getElementById('yourscore')
 
 var timer;
 var timerVal;
@@ -24,7 +25,8 @@ var questions = [
             { text: 'Number', correct: false },
             { text: 'Boolean', correct: true },
             { text: 'Bigint', correct: false },
-        ]},
+        ]
+    },
     {
         question: 'Which logical operator means that both conditions must be true?',
         answer: [
@@ -32,7 +34,8 @@ var questions = [
             { text: '==', correct: false },
             { text: '||', correct: false },
             { text: '!==', correct: false },
-        ]},
+        ]
+    },
     {
         question: 'Which is not a language we will be learning in this course?',
         answer: [
@@ -40,8 +43,9 @@ var questions = [
             { text: 'CSS', correct: false },
             { text: 'Javascript', correct: false },
             { text: 'Python', correct: true },
-        ]},
-    
+        ]
+    },
+
 ]
 
 // Functions 
@@ -79,24 +83,40 @@ function startTimer() {
 function loseGame() {
     if (timerVal == 0) {
         answerDiv.classList.add('hidden')
-        questionContainer.textContent ="GAME OVER!!!!"
-        alert("GAME OVER!")
+        questionContainer.textContent = "GAME OVER!!!!"
+        submitInit.classList.remove('hidden')
+        yourScore.textContent = timerVal;
     }
 }
 
-function winGame () {
+function saveName() {
+    var name = document.getElementById('initials').value;
+
+    localStorage.setItem('name', name)
+
+    document.getElementById('display-name').innerHTML = "Your name is: " + name;
+}
+
+var saveBtn = document.getElementById('save-name')
+
+saveBtn.addEventListener('click', saveName);
+
+function winGame() {
     isWin = true;
-    questionContainer.textContent ="YOU WON!!!🏆"
+    questionContainer.textContent = "YOU WON!!!🏆"
     answerDiv.classList.add('hidden')
     localStorage.setItem('Score', timerVal + 5)
     clearTimeout(timer)
     submitInit.classList.remove('hidden')
-    }
+    yourScore.textContent = timerVal + 5;
+}
 
 
 function init() {
     score = localStorage.getItem('Score', timerVal)
     scoreText.innerText = score
+    timerVal = 0;
+    timerEl.textContent = timerVal;
 }
 
 function showQuestion1(currentQ) {
@@ -111,7 +131,7 @@ function showQuestion1(currentQ) {
     btn2.addEventListener('click', subtractTime)
     btn3.addEventListener('click', showQuestion2)
     btn4.addEventListener('click', subtractTime)
-    
+
 }
 
 function showQuestion2(currentQ) {
@@ -147,8 +167,9 @@ function subtractTime() {
         timerVal === 0
     }
     else {
-    timerVal= timerVal - 5
-}}
+        timerVal = timerVal - 5
+    }
+}
 // Event Listener 
 
 startBtn.addEventListener('click', startGame);
